@@ -1,38 +1,35 @@
-.App {
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Righteous&display=swap');
+
+* {
+  background-color: rgb(22, 22, 22);
+  color: rgb(228, 222, 222);
   text-align: center;
+  text-justify: center;
+}
+
+header {
+  position: fixed;
+  top: 0%;
+  padding-top: 20px;
+  width: 100%;
+  z-index: 100;
+  font-family: Fredoka One;
+  font-size: 40px;
+}
+
+.NavBar {
+  margin-top: 150px;
+  margin-left: 200px;
+  margin-right: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Righteous;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 70vmin;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
