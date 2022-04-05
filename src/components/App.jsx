@@ -1,5 +1,6 @@
 import './App.css';
-import logo from './logo.jpg';
+import logo from '../logo.jpg';
+import {Link} from "react-router-dom";
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
        Welcome to Wordle
       </header> 
       <div className='NavBar'>
-        <h2 >Rules</h2>
+        <Link to={"/rules"}>
+          <h2 >Rules</h2>
+        </Link>
         <img src={logo} className="App-logo" alt="logo" />
         <h2>Game</h2>
       </div>
