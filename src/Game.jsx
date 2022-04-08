@@ -1,8 +1,8 @@
 import './Game.css';
-import Board from "./component/Board";
-import Keyboard from "./component/Keyboard";
+import Board from "./components/Board";
+import Keyboard from "./components/Keyboard";
 import {createContext, useState} from "react";
-import { initalBoard } from "./component/BoardMatrix";
+import { initalBoard } from "./components/BoardMatrix";
 
 export const AppContext = createContext();
 
