@@ -68,7 +68,6 @@ function Game() {
             <Keyboard />
             </div>
             </AppContext.Provider>
-
         </div>
     );
 }
