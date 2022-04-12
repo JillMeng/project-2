@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
-import { AppContext } from '../Game';
-
+import { AppContext } from './Game';
 
 function Letter(props) {
     const {board, answer, currCount} = useContext(AppContext);
     const letter = board[props.letterRow][props.letterCol];
 
-    const correct = answer.toUpperCase()[props.letterCol] === letter;
-    const almost = !correct && letter && answer.includes(letter);
+    const correct = answer[props.letterCol] === letter;
+    const almost = !correct && answer.includes(letter);
 
     // only check after we press 'enter'
     const letterResult = currCount.row > props.letterRow && 
