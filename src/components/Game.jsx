@@ -20,7 +20,9 @@ function Game(props) {
     (difficulty === 'easy') ? 5 : 
     (difficulty === 'medium') ? 6 : 7;
 
-    const [board, setBoard] = useState(initalBoard);
+
+    let defaultBoard = initalBoard;
+    const [board, setBoard] = useState(defaultBoard);
     const [currCount, setCurrCount] = useState({
         row: 0,
         col: 0
@@ -68,6 +70,17 @@ function Game(props) {
             col: currCount.col + 1
         });
     }
+
+    const onRefresh = () => {
+        const newBoard = defaultBoard;
+        setBoard(newBoard);
+        setCurrCount({
+            row: 0,
+            col: 0,
+        });
+    }
+
+    
     return (
         <div className="Game">
             <header> Difficulty Level - {difficulty}</header>
@@ -79,6 +92,7 @@ function Game(props) {
                 onDelete,
                 onEnter,
                 onSelect,
+                onRefresh,
             }}>
                 <div className='container'>
                     <Board className = {difficulty} row = {boardRow} col = {boardCol}/>

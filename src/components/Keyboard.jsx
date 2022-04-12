@@ -24,6 +24,7 @@ function Keyboard() {
         return <Key keyValue={key}/>
       })}
       <Key keyValue="DELETE" wordKey/>
+      <Key keyValue="REFRESH" wordKey/>
       </div>
     </div>
     </div>

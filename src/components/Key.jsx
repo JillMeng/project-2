@@ -5,7 +5,8 @@ function Key(props) {
     const {
         onDelete,
         onEnter,
-        onSelect
+        onSelect,
+        onRefresh,
     } = useContext(AppContext);
 
     const selectLetter = () => {
@@ -13,6 +14,8 @@ function Key(props) {
             onEnter();
         }else if(props.keyValue === "DELETE") {
             onDelete();
+        }else if(props.keyValue === "REFRESH") {
+            onRefresh();
         } else {
             onSelect(props);
         }       
