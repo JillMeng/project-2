@@ -6,7 +6,7 @@ function Letter(props) {
     const letter = board[props.letterRow][props.letterCol];
 
     const correct = answer[props.letterCol] === letter;
-    const almost = !correct && answer.includes(letter);
+    const almost = !correct && letter && answer.includes(letter);
 
     // only check after we press 'enter'
     const letterResult = currCount.row > props.letterRow && 
