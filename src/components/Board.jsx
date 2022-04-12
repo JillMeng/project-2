@@ -8,13 +8,11 @@ function Board(props) {
   for(let i = 0; i< props.row; i++) {
     rowArray.push(i);
   }
-  console.log(rowArray.length);
 
   const colArray = [];
   for(let j = 0; j< props.col; j++) {
     colArray.push(j);
   }
-  console.log(colArray.length);
 
   return <div className = {props.className}>
       {rowArray.map((numR, index) => <div className='row'>

@@ -5,7 +5,7 @@
   text-justify: center;
 }
 
-header {
+/* header {
   position: fixed;
   top: 0%;
   padding-top: 20px;
@@ -13,14 +13,14 @@ header {
   z-index: 100;
   font-family: Fredoka One;
   font-size: 35px;
-}
+} */
 
 .container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content:space-between;
   gap: 20px;
 }
 
@@ -65,7 +65,7 @@ header {
   flex-direction: row;
   display: flex;
   justify-content: center;
-  margin: 5px;
+  margin: 3px;
 }
 
 .key {
@@ -83,6 +83,13 @@ header {
   width: 100px;
 }
 
+#startKey {
+  color:antiquewhite;
+  border-radius: 20px;
+  width: 100px;
+  background-color: rgb(121, 191, 214);
+}
+
 .letter {
   flex: 33%;
   height: 100%;
@@ -93,4 +100,65 @@ header {
   font-size: 30px;
   font-weight: bolder;
   color: white;
+}
+
+@media (max-width: 600px) {
+    header {
+      padding-top: 10px;
+      font-size: 20px;
+    }
+
+    .keyboard {
+      width: 400px;
+      height: 200px;
+    }
+
+    .key {
+      height: 40px;
+      width: 30px;
+      font-size: 15px;
+      margin: 2px;
+    }
+
+    #small{
+      font-size: 10px;
+      width: 50px;
+    }
+
+    #startKey {
+      border-radius: 10px;
+      font-size: 10px;
+      width: 60px;
+    }
+    .letter {
+      font-size: 20px;
+    }
+    .easy {
+      margin-top: 60px;
+      width: 80vmin;
+      height: 100vmin;
+    }
+    .medium {
+      margin-top: 60px;
+      width: 90vmin;
+      height: 100vmin;
+    }
+    .hard {
+      margin-top: 60px;
+      width: 100vmin;
+      height: 80vmin;
+    }
+}
+
+
+#correct {
+  background-color: #469e40;
+}
+
+#almost {
+  background-color: #b8a236;
+}
+
+#wrong {
+  background-color: #38353d;
 }

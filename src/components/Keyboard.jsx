@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import Key from './Key';
 
 function Keyboard() {
@@ -24,8 +24,11 @@ function Keyboard() {
         return <Key keyValue={key}/>
       })}
       <Key keyValue="DELETE" wordKey/>
-      <Key keyValue="REFRESH" wordKey/>
       </div>
+      <div className='line'>
+      <Key keyValue="RESTART" startKey/>
+      </div>
+      
     </div>
     </div>
     

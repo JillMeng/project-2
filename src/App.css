@@ -6,7 +6,7 @@
   color: rgb(228, 222, 222);
 }
 
-.Welcome {
+/* .Welcome {
   position: fixed;
   top: 0%;
   padding-top: 20px;
@@ -14,19 +14,27 @@
   z-index: 100;
   font-family: Fredoka One;
   font-size: 40px;
+} */
+header {
+  position: fixed;
+  top: 0%;
+  padding-top: 20px;
+  width: 100%;
+  z-index: 100;
+  font-family: Fredoka One;
+  font-size: 35px;
 }
 
 .NavBar {
   position: fixed;
   margin-top: 100px;
-  margin-left: 0px;
-  padding-left: 50px;
+  padding-left: 20px;
   display: flex;
   flex-direction: column;
-  text-align: left;
   gap: 50px;
   font-family: Fredoka One;
   font-size: 20px;
+  z-index: 100;
 }
 
 .navlink:hover {
@@ -39,5 +47,26 @@
   margin-top: 100px;
   height: 70vmin;
 }
+
+@media (max-width: 600px) {
+  .Welcome {
+    font-size: 30px;
+  }
+  .NavBar {
+    margin-top: 40px;
+    padding-left: 0;
+    gap: 10px;
+    font-size: 10px;
+    flex-direction: row;
+  }
+  .navlink:hover {
+    font-size: 15px;
+  }
+  .App-logo {
+    margin-top: 80px;
+  }
+  
+}
+
 
 

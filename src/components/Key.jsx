@@ -14,15 +14,15 @@ function Key(props) {
             onEnter();
         }else if(props.keyValue === "DELETE") {
             onDelete();
-        }else if(props.keyValue === "REFRESH") {
+        }else if(props.keyValue === "RESTART") {
             onRefresh();
         } else {
             onSelect(props);
-        }       
+        }
     }
   return (
     <div className='key' 
-    id = {props.wordKey && "small" } 
+    id = {(props.wordKey) ? "small" : (props.startKey) ? "startKey" : ""} 
     onClick={selectLetter}>{props.keyValue}</div>
   )
 }
