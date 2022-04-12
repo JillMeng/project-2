@@ -31,6 +31,7 @@ function Game(props) {
     const [over, setOver] = useState(false);
     console.log(answer);
 
+
     const deepBoardCopy = (board) => {
         let newBoard = [];
         for (let row of board) {
@@ -42,7 +43,6 @@ function Game(props) {
         }
         return newBoard;
     }
-
     useEffect(() => {
         const newAnswer = wordBank[boardCol][Math.floor(Math.random() * wordBank[boardCol].length)].toUpperCase();
         setAnswer(newAnswer);
@@ -68,6 +68,7 @@ function Game(props) {
             });
         } else {
             let attempt = '';
+
             for (let i = 0; i < boardCol; i++) {
                 attempt += board[currCount.row][i];
             }
@@ -75,6 +76,7 @@ function Game(props) {
             if (attempt === answer) {
                 alert("Congratulations! You won the game. Do you want to try again?");
                 setOver(true);
+
             } else if (currCount.row === boardRow - 1) {
                 alert("You failed to guess the word. Try again?")
                 setOver(true);
@@ -129,7 +131,6 @@ function Game(props) {
                 setCurrCount,
                 onDelete,
                 onEnter,
-                onSelect,
                 onRefresh,
                 answer,
             }}>
