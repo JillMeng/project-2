@@ -4,11 +4,9 @@
 * {
   background-color: rgb(22, 22, 22);
   color: rgb(228, 222, 222);
-  text-align: center;
-  text-justify: center;
 }
 
-header {
+.Welcome {
   position: fixed;
   top: 0%;
   padding-top: 20px;
@@ -19,16 +17,26 @@ header {
 }
 
 .NavBar {
-  margin-top: 150px;
-  margin-left: 200px;
-  margin-right: 200px;
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 0px;
+  padding-left: 50px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: Righteous;
+  flex-direction: column;
+  text-align: left;
+  gap: 50px;
+  font-family: Fredoka One;
+  font-size: 20px;
+}
+
+.navlink:hover {
+  color: aquamarine;
+  font-size: 25px;
+  transition: 500ms;
 }
 
 .App-logo {
+  margin-top: 100px;
   height: 70vmin;
 }
 
