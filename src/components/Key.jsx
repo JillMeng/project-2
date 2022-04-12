@@ -3,10 +3,6 @@ import { AppContext } from '../Game';
 
 function Key(props) {
     const {
-        board, 
-        setBoard, 
-        currCount, 
-        setCurrCount,
         onDelete,
         onEnter,
         onSelect
@@ -19,7 +15,7 @@ function Key(props) {
             onDelete();
         } else {
             onSelect(props);
-        }       
+        }
     }
   return (
     <div className='key' 

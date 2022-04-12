@@ -78,3 +78,14 @@
     color: white;
   }
   
+  #correct {
+    background-color: #469e40;
+  }
+  
+  #almost {
+    background-color: #b8a236;
+  }
+  
+  #wrong {
+    background-color: #38353d;
+  }
