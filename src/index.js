@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { Routes, Route, BrowserRouter as Router} from "react-router-dom";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Game from './components/Game';
 import Rules from './components/Rules';
 import Navbar from './components/Navbar';

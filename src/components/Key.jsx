@@ -5,23 +5,26 @@ function Key(props) {
     const {
         onDelete,
         onEnter,
-        onSelect
+        onSelect,
+        onRefresh,
     } = useContext(AppContext);
 
     const selectLetter = () => {
-        if(props.keyValue === "ENTER") {
+        if (props.keyValue === "ENTER") {
             onEnter();
-        }else if(props.keyValue === "DELETE") {
+        } else if (props.keyValue === "DELETE") {
             onDelete();
+        } else if (props.keyValue === "RESTART") {
+            onRefresh();
         } else {
             onSelect(props);
         }
     }
-  return (
-    <div className='key' 
-    id = {props.wordKey && "small" } 
-    onClick={selectLetter}>{props.keyValue}</div>
-  )
+    return (
+        <div className='key'
+            id={(props.wordKey) ? "small" : (props.startKey) ? "startKey" : ""}
+            onClick={selectLetter}>{props.keyValue}</div>
+    )
 }
 
 export default Key
