@@ -1,3 +1,4 @@
+import React from 'react';
 import './Rules.css';
 import correct from '../examples/correct_position.png';
 import wrong from '../examples/wrong_position.png';
