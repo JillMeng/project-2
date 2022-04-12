@@ -13,13 +13,13 @@ function Game(props) {
     let params = useParams();
     let difficulty = params.difficulty;
 
-    let boardRow = 
-    (difficulty === 'easy') ? 7 : 
-    (difficulty === 'medium') ? 6 : 5;
+    let boardRow =
+        (difficulty === 'easy') ? 7 :
+            (difficulty === 'medium') ? 6 : 5;
 
-    let boardCol = 
-    (difficulty === 'easy') ? 5 : 
-    (difficulty === 'medium') ? 6 : 7;
+    let boardCol =
+        (difficulty === 'easy') ? 5 :
+            (difficulty === 'medium') ? 6 : 7;
 
 
     const [board, setBoard] = useState(initalBoard);
@@ -33,13 +33,13 @@ function Game(props) {
 
     const deepBoardCopy = (board) => {
         let newBoard = [];
-            for (let row of board) {
-                let newRow = [];
-                for (let l of row) {
-                    newRow.push(l);
-                }
-                newBoard.push(newRow);
+        for (let row of board) {
+            let newRow = [];
+            for (let l of row) {
+                newRow.push(l);
             }
+            newBoard.push(newRow);
+        }
         return newBoard;
     }
 
@@ -68,14 +68,14 @@ function Game(props) {
             });
         } else {
             let attempt = '';
-            for (let i=0; i < boardCol; i++) {
+            for (let i = 0; i < boardCol; i++) {
                 attempt += board[currCount.row][i];
             }
 
             if (attempt === answer) {
                 alert("Congratulations! You won the game. Do you want to try again?");
                 setOver(true);
-            } else if (currCount.row === boardRow - 1){
+            } else if (currCount.row === boardRow - 1) {
                 alert("You failed to guess the word. Try again?")
                 setOver(true);
             }
@@ -118,7 +118,7 @@ function Game(props) {
         });
     }
 
-    
+
     return (
         <div className="Game">
             <header> Difficulty Level - {difficulty}</header>
@@ -134,7 +134,7 @@ function Game(props) {
                 answer,
             }}>
                 <div className='container'>
-                    <Board className = {difficulty} row = {boardRow} col = {boardCol}/>
+                    <Board className={difficulty} row={boardRow} col={boardCol} />
                     <Keyboard />
                 </div>
             </AppContext.Provider>

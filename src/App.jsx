@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import logo from './logo.jpg';
 import './App.jsx';
-import Navbar from './components/Navbar';
 
 function App() {
   return (

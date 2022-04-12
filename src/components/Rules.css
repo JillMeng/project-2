@@ -28,20 +28,17 @@ p {
     width: 100%;
 }
 
-/* .rules-header {
-    text-align: center;
-    font-size: 50px;
-  } */
-
-  @media (max-width: 700px) {
+@media (max-width: 700px) {
     .rules {
         margin-top: 50px;
     }
+
     p {
         font-size: 15px;
     }
+
     h2 {
         font-size: 20px;
     }
-      
-  }
+
+}

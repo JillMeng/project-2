@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   gap: 20px;
 }
 
@@ -84,7 +84,7 @@
 }
 
 #startKey {
-  color:antiquewhite;
+  color: antiquewhite;
   border-radius: 20px;
   width: 100px;
   background-color: rgb(121, 191, 214);
@@ -102,52 +102,56 @@
   color: white;
 }
 
-@media (max-width: 600px) {
-    header {
-      padding-top: 10px;
-      font-size: 20px;
-    }
+@media (max-width: 700px) {
+  header {
+    padding-top: 10px;
+    font-size: 20px;
+  }
 
-    .keyboard {
-      width: 400px;
-      height: 200px;
-    }
+  .keyboard {
+    width: 400px;
+    height: 200px;
+  }
 
-    .key {
-      height: 40px;
-      width: 30px;
-      font-size: 15px;
-      margin: 2px;
-    }
+  .key {
+    height: 40px;
+    width: 30px;
+    font-size: 15px;
+    margin: 2px;
+  }
 
-    #small{
-      font-size: 10px;
-      width: 50px;
-    }
+  #small {
+    font-size: 10px;
+    width: 50px;
+  }
 
-    #startKey {
-      border-radius: 10px;
-      font-size: 10px;
-      width: 60px;
-    }
-    .letter {
-      font-size: 20px;
-    }
-    .easy {
-      margin-top: 60px;
-      width: 80vmin;
-      height: 100vmin;
-    }
-    .medium {
-      margin-top: 60px;
-      width: 90vmin;
-      height: 100vmin;
-    }
-    .hard {
-      margin-top: 60px;
-      width: 100vmin;
-      height: 80vmin;
-    }
+  #startKey {
+    border-radius: 10px;
+    font-size: 10px;
+    width: 60px;
+  }
+
+  .letter {
+    font-size: 20px;
+  }
+
+  .easy {
+    margin-top: 60px;
+    width: 80vmin;
+    height: 100vmin;
+  }
+
+  .medium {
+    margin-top: 60px;
+    width: 90vmin;
+    height: 100vmin;
+  }
+
+  .hard {
+    margin-top: 60px;
+    width: 100vmin;
+    height: 80vmin;
+  }
 }
 
 

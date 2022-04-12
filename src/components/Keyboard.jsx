@@ -8,30 +8,28 @@ function Keyboard() {
 
   return (
     <div>
-    <div className='keyboard'>
-      <div className='line'> {lettersL1.map((key) => {
-        return <Key keyValue={key}/>
-      })}
+      <div className='keyboard'>
+        <div className='line'> {lettersL1.map((key) => {
+          return <Key keyValue={key} />
+        })}
+        </div>
+        <div className='line'> {lettersL2.map((key) => {
+          return <Key keyValue={key} />
+        })}
+        </div>
+        <div className='line'>
+          <Key keyValue="ENTER" wordKey />
+          {lettersL3.map((key) => {
+            return <Key keyValue={key} />
+          })}
+          <Key keyValue="DELETE" wordKey />
+        </div>
+        <div className='line'>
+          <Key keyValue="RESTART" startKey />
+        </div>
       </div>
-      <div className='line'> {lettersL2.map((key) => {
-        return <Key keyValue={key}/>
-      })}
-      </div>
-      
-      <div className='line'> 
-      <Key keyValue="ENTER" wordKey/>
-      {lettersL3.map((key) => {
-        return <Key keyValue={key}/>
-      })}
-      <Key keyValue="DELETE" wordKey/>
-      </div>
-      <div className='line'>
-      <Key keyValue="RESTART" startKey/>
-      </div>
-      
     </div>
-    </div>
-    
+
   )
 }
 
