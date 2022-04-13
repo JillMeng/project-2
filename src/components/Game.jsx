@@ -133,6 +133,7 @@ function Game(props) {
                 onEnter,
                 onRefresh,
                 answer,
+                onSelect
             }}>
                 <div className='container'>
                     <Board className={difficulty} row={boardRow} col={boardCol} />
