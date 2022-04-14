@@ -28,10 +28,8 @@ function Game(props) {
         col: 0
     });
     const [answer, setAnswer] = useState("");
-    const [over, setOver] = useState(false);
     console.log(answer);
     const [message, setMessage] = useState(null);
-
 
     const deepBoardCopy = (board) => {
         let newBoard = [];
@@ -44,6 +42,7 @@ function Game(props) {
         }
         return newBoard;
     }
+
     useEffect(() => {
         const newAnswer = wordBank[boardCol][Math.floor(Math.random() * wordBank[boardCol].length)].toUpperCase();
         setAnswer(newAnswer);
@@ -52,7 +51,7 @@ function Game(props) {
             col: 0,
         });
         setBoard(initalBoard);
-    }, [boardCol, over]);
+    }, [boardCol]);
 
     const handleMessage = (message) => {
         setMessage(message);
@@ -82,11 +81,9 @@ function Game(props) {
 
             if (attempt === answer) {
                 handleMessage("Congratulations! You won! Try again?");
-                setOver(true);
 
             } else if (currCount.row === boardRow - 1) {
                 handleMessage("Sorry, you failed. Try again?");
-                setOver(true);
             }
             setCurrCount({
                 row: currCount.row + 1,
@@ -124,6 +121,8 @@ function Game(props) {
             row: 0,
             col: 0,
         });
+        const newAnswer = wordBank[boardCol][Math.floor(Math.random() * wordBank[boardCol].length)].toUpperCase();
+        setAnswer(newAnswer);
     }
 
 

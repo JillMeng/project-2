@@ -14,7 +14,10 @@ function Letter(props) {
     (correct ? "correct" : almost ? "almost" : "wrong");
 
   return (
-    <div className='letter' id={letterResult}>{letter}</div>
+    <div className='letter' 
+      id={(currCount.row > props.letterRow) ? letterResult: undefined}>
+        {letter}
+    </div>
   )
 }
 

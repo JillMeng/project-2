@@ -16,8 +16,8 @@ function Board(props) {
 
   return <div className={props.className}>
     <div className='message'>{props.message}</div>
-    {rowArray.map((numR, index) => <div className='row'>
-      {colArray.map((numC, index) => <Letter letterRow={numR} letterCol={numC} />)}
+    {rowArray.map((numR, index) => <div className='row' key={index}>
+      {colArray.map((numC, index) => <Letter letterRow={numR} letterCol={numC} key={index}/>)}
     </div>)}
   </div>;
 }
