@@ -30,6 +30,7 @@ function Game(props) {
     const [answer, setAnswer] = useState("");
     const [over, setOver] = useState(false);
     console.log(answer);
+    const [message, setMessage] = useState(null);
 
 
     const deepBoardCopy = (board) => {
@@ -53,9 +54,15 @@ function Game(props) {
         setBoard(initalBoard);
     }, [boardCol, over]);
 
+    const handleMessage = (message) => {
+        setMessage(message);
+        setTimeout(() => {
+            setMessage(null);
+        }, 2000);
+    }
     const onEnter = () => {
         if (currCount.col !== boardCol) {
-            alert("THE WORD LENGTH IS: " + boardCol);
+            handleMessage("The word length is: " + boardCol);
             let newBoard = deepBoardCopy(board);
 
             for (var i = 0; i < currCount.col; i++) {
@@ -74,14 +81,13 @@ function Game(props) {
             }
 
             if (attempt === answer) {
-                alert("Congratulations! You won the game. Do you want to try again?");
+                handleMessage("Congratulations! You won! Try again?");
                 setOver(true);
 
             } else if (currCount.row === boardRow - 1) {
-                alert("You failed to guess the word. Try again?")
+                handleMessage("Sorry, you failed. Try again?");
                 setOver(true);
             }
-
             setCurrCount({
                 row: currCount.row + 1,
                 col: 0
@@ -136,7 +142,11 @@ function Game(props) {
                 onSelect
             }}>
                 <div className='container'>
-                    <Board className={difficulty} row={boardRow} col={boardCol} />
+                    <Board
+                        className={difficulty}
+                        row={boardRow}
+                        col={boardCol}
+                        message={message} />
                     <Keyboard />
                 </div>
             </AppContext.Provider>
